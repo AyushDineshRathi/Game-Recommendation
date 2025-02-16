@@ -40,11 +40,19 @@ This intelligent system analyzes multiple factors—such as your name, favorite 
    ```bash
    pip install -r requirements.txt
    ```
-4. **Run the application**
+4. **Run the Jupyter Notebook (`games.ipynb`)**
+   - Open the notebook in Jupyter:
+     ```bash
+     jupyter notebook games.ipynb
+     ```
+   - This will automatically load all the required `.joblib` files.
+   - Run all the cells in sequence to execute the program.
+
+6. **Run the application**
    ```bash
    python app.py
    ```
-5. **Open the browser** and visit `http://127.0.0.1:5000`
+7. **Open the browser** and visit `http://127.0.0.1:5000`
 
 ## 📢 Contributing
 Pull requests are welcome! If you’d like to contribute, feel free to fork the repository and submit a PR.
