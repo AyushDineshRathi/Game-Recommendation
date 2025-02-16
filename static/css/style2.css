@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0a0a0a;
+    color: #fff;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #111, #222, #111);
+    padding: 15px 30px;
+    border-bottom: 3px solid #0ff;
+    box-shadow: 0 0 15px #0ff;
+}
+
+nav .title {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #0ff;
+    text-shadow: 0 0 10px #0ff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #0ff;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff0;
+    text-shadow: 0 0 10px #ff0;
+}
+
+/* Recommendations Section */
+.recommendations {
+    margin-top: 30px;
+}
+
+.recommendations h1 {
+    font-size: 28px;
+    color: #0ff;
+    text-shadow: 0 0 10px #0ff;
+}
+
+/* Game Recommendations List */
+#gameList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    gap: 15px;
+    list-style: none;
+    margin-top: 20px;
+}
+
+#gameList li {
+    font-size: 1.3em;
+    color: #0ff;
+    padding: 15px 25px;
+    width: 50%;
+    text-align: center;
+    background: rgba(10, 10, 10, 0.95);
+    border: 2px solid #0ff;
+    border-radius: 10px;
+    text-transform: capitalize;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Hover Effect */
+#gameList li:hover {
+    background: #0ff;
+    color: #000;
+    box-shadow: 0 0 15px #0ff, 0 0 25px #0ff;
+    transform: scale(1.05);
+    border: 2px solid #ff0;
+}
+
+/* Search Bar */
+#search {
+    width: 80%;
+    padding: 10px;
+    font-size: 1em;
+    margin: 20px 0;
+    border: 2px solid #0ff;
+    border-radius: 5px;
+    background: #111;
+    color: #0ff;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    border: 2px solid #0ff;
+    padding: 12px;
+    text-align: center;
+}
+
+table th {
+    background: #0ff;
+    color: #000;
+    font-size: 1.2em;
+}
+
+table td {
+    background: rgba(10, 10, 10, 0.95);
+    color: #0ff;
+    font-size: 1.1em;
+}
+
+/* Hover Effect on Rows */
+table tr:hover {
+    background: rgba(0, 255, 255, 0.3);
+    transition: 0.3s;
+}
+
+/* Game Item Styling */
+.game-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #222;
+    padding: 10px 15px;
+    margin: 10px auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    max-width: 400px;
+    transition: all 0.3s ease-in-out;
+}
+
+.game-name {
+    font-size: 1.2em;
+    color: #0ff;
+    transition: color 0.3s ease-in-out;
+}
+
+.game-item:hover .game-name {
+    color: rgb(225, 0, 255) !important;
+    text-shadow: 0 0 10px #0ff;
+}
+
+.game-item:hover {
+    background: rgba(0, 255, 255, 0.3); 
+}
+
+/* Like Button */
+.like-btn {
+    background: #0ff;
+    color: #000;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #0ff;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.like-btn:hover {
+    background: #ff0;
+    box-shadow: 0 0 15px #ff0;
+}
+/* Heart Icon */
+.like-btn .heart {
+    color: red;
+    font-size: 1.2em;
+    transition: transform 0.2s ease-in-out;
+}
+
+.like-btn:hover .heart {
+    transform: scale(1.2);
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(90deg, #0f0f0f, #111, #0f0f0f);
+    color: #0ff;
+    box-shadow: 0px -4px 15px rgba(0, 255, 255, 0.5);
+    font-size: 14px;
+    text-align: center;
+}
+
+footer .github-link {
+    color: #4da8da;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+footer .github-link img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+    filter: brightness(0.9);
+}
+
+footer .github-link:hover img {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+footer .github-link:hover {
+    text-decoration: underline;
+    color: #00aaff;
+}

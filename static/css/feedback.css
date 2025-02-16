@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0a0a0a;
+    color: #fff;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* Navigation Bar (Same as index.html) */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #111, #222, #111);
+    padding: 15px 30px;
+    border-bottom: 3px solid #0ff;
+    box-shadow: 0 0 15px #0ff;
+}
+
+nav .title {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #0ff;
+    text-shadow: 0 0 10px #0ff;
+}
+
+nav .intro {
+    display: flex;
+    align-items: center;
+}
+
+nav .intro img {
+    height: 50px;
+    border-radius: 10px;
+    margin-right: 15px;
+    filter: drop-shadow(0 0 10px #0ff);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #0ff;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff0;
+    text-shadow: 0 0 10px #ff0;
+}
+
+/* Feedback Form */
+.feedback {
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.feedback h1 {
+    font-size: 28px;
+    color: #0ff;
+    text-shadow: 0 0 10px #0ff;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+label {
+    font-size: 18px;
+    color: #ddd;
+}
+
+input, textarea {
+    width: 50%;
+    padding: 10px;
+    border: 2px solid #0ff;
+    border-radius: 5px;
+    background: #222;
+    color: #fff;
+}
+
+button {
+    padding: 10px 20px;
+    background: #0ff;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #ff0;
+    color: #000;
+}
+
+/* Response Message */
+#responseMessage {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #0f0;
+}
+
+/* Like Button */
+.like-btn {
+    background: #0ff;
+    color: #000;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #0ff;
+    transition: 0.3s;
+}
+
+.like-btn:hover {
+    background: #ff0;
+    box-shadow: 0 0 15px #ff0;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #222324; /* Dark Blue-Black */
+    color: #e0e0e0;
+    font-size: 14px;
+    filter: drop-shadow(0 0 10px #0ff);
+}
+
+footer p {
+    margin: 0;
+    padding-bottom: 5px;
+}
+
+footer .github-link {
+    color: #4da8da; /* Light Blue */
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* Spacing between image and text */
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+footer .github-link img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%; /* Makes the image circular */
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+    filter: brightness(0.9);
+}
+
+footer .github-link:hover img {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+    filter: brightness(1.2);
+}
+
+footer .github-link:hover {
+    text-decoration: underline;
+    color: #00aaff; /* Brighter Blue */
+}
+
+
+/* Toggle Button */
+.toggle-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 1.2em;
+    background: #0ff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #0ff;
+}

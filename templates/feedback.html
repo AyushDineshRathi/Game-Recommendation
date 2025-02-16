@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="../static/css/feedback.css">
+</head>
+<body>
+    <nav>
+        <div class="intro">
+            <img src="{{ url_for('static', filename='images/logo.jpeg') }}" alt="Logo">
+            <div class="title">Game Recommendation System</div>
+        </div>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About Project</a></li>
+        </ul>
+    </nav>
+
+    <!-- Feedback Form -->
+    <section class="feedback">
+        <h1>Share Your Feedback</h1>
+        <form id="feedbackForm">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="message">Your Feedback:</label>
+            <textarea id="message" rows="4" required></textarea>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+
+        <p id="responseMessage"></p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Game Recommendation System. All rights reserved.</p>
+        <br>
+        <a href="https://github.com/AyushDineshRathi" target="_blank" class="github-link" rel="noopener">
+            <img src="../static/images/github.jpg" alt="github-link"> Ayush Dinesh Rathi
+        </a>
+        <br>
+    </footer>
+
+    <script src="../static/js/feedback.js"></script>
+</body>
+</html>

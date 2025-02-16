@@ -1,0 +1,11 @@
+Flask==3.0.0
+joblib==1.3.2
+numpy==1.26.2
+pandas==2.1.4
+fuzzywuzzy==0.18.0
+scikit-learn==1.3.0
+python-Levenshtein==0.23.0 (Optional)
+pickle5==0.0.11
+
+Write the following command in the terminal to install dependencies:
+pip install -r requirements.txt

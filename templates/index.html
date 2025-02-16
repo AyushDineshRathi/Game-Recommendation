@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Recommendation System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style1.css') }}">
+</head>
+<body>
+    <nav>
+        <div class="intro">
+            <img src="{{ url_for('static', filename='images/logo.jpeg') }}" alt="Logo">
+            <div class="title">Game Recommendation System</div>
+        </div>
+        <div class="extra">
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About Project</a></li>
+                <li><a href="{{ url_for('feedback') }}">Feedback</a></li>
+            </ul>
+            <!-- <div class="toggle-container">🌙</div> -->
+        </div>
+    </nav>
+    <div class="main">
+        <div class="left">
+            <h1>Welcome to Game Recommendation System</h1>
+            <p>Our system recommends games based on your preferences using collaborative filtering algorithms. Enter your details to get personalized recommendations.</p>
+        </div>
+
+        
+        <div class="right">
+            <h2>Get Started</h2>
+            <form id="gameForm">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+                
+                <label for="genres">Genres:</label><br>
+                <select id="genres" name="genres" required>
+                    <option value="Action">Action</option>
+                    <option value="Adventure">Adventure</option>
+                    <option value="RPG">RPG</option>
+                    <option value="Strategy">Strategy</option>
+                    <option value="Shooter">Shooter</option>
+                    <option value="Sports">Sports</option>
+                    <option value="Puzzle">Puzzle</option>
+                </select>
+                
+                <label for="category">Category:</label><br>
+                <select id="category" name="category" required>
+                    <option value="singleplayer">Singleplayer</option>
+                    <option value="multiplayer">Multiplayer</option>
+                </select><br><br>
+
+                <label for="about">Developers:</label><br>
+                <input type="text" id="developers" name="developers" title="Enter the developers' names" placeholder="Developers' names"><br><br>
+
+                <label for="about">About The Game:</label><br>
+                <input type="text" id="about" name="about" required><br><br>
+            
+                <button type="submit">Get Recommendations</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Game Recommendation System.</p>
+        <br>
+        <a href="https://github.com/AyushDineshRathi" target="_blank" class="github-link" rel="noopener">
+            <img src="../static/images/github.jpg" alt="github-link"> Ayush Dinesh Rathi
+        </a>
+        <br>
+    </footer>
+    <script src="{{ url_for('static', filename='js/script1.js') }}"></script>
+</body>
+</html>

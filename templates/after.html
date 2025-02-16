@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommended Games</title>
+    <link rel="stylesheet" href="../static/css/style2.css">
+</head>
+<body>
+    <nav>
+        <div class="title">Game Recommender</div>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="#">Trending Games</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="recommendations">
+        <h1>Your Personalized Game Recommendations</h1>
+        <ul id="gameList"></ul>
+    </div>
+
+    <footer>
+        &copy; 2025 Game Recommender | All rights reserved.
+    </footer>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const games = JSON.parse(urlParams.get("games") || "[]"); // Parse as JSON array
+
+        // Reference to the game list
+        const gameList = document.getElementById("gameList");
+
+        // Append each game with a like button
+        games.forEach(game => {
+            let li = document.createElement("li");
+            li.classList.add("game-item");
+            li.innerHTML = `
+                <span class="game-name">${game}</span>
+                <button class="like-btn" onclick="likeGame(this)">💙</button>
+            `;
+            gameList.appendChild(li);
+        });
+
+        function likeGame(button) {
+            button.textContent = "💜";
+            button.style.backgroundColor = "#ff0";
+            button.style.color = "#000";
+            button.disabled = true;
+        }
+    </script>
+
+</body>
+</html>
